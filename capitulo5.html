@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sofian Marketing Quiz – Capítulo 5</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1>Sofian Marketing Quiz</h1>
+    <p>Comportamento do consumidor.</p>
+  </header>
+
+  <main class="quiz-wrapper">
+    <a class="back-link" href="index.html">&larr; Voltar ao índice</a>
+
+    <div class="quiz-header">
+      <h2>Capítulo 5</h2>
+      <p>20 perguntas de escolha múltipla + 2 abertas.</p>
+    </div>
+
+    <div id="quiz-container"></div>
+  </main>
+
+  <script>
+    const quizData = {
+      title: "Sofian Marketing Quiz – Capítulo 6",
+      description: "Comportamento do consumidor.",
+     questions: [
+  {
+    id: 1,
+    type: "mcq",
+    text: "1. O mercado de consumo é composto por:",
+    options: [
+      "Empresas que compram para revender.",
+      "Indivíduos e famílias que compram para consumo pessoal.",
+      "Governos que compram para serviços públicos.",
+      "Organizações sem fins lucrativos."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 2,
+    type: "mcq",
+    text: "2. No modelo da 'caixa preta', os estímulos de marketing entram na:",
+    options: [
+      "Cadeia de valor.",
+      "Caixa preta do consumidor (características e processo de decisão).",
+      "Concorrência.",
+      "Força de vendas."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 3,
+    type: "mcq",
+    text: "3. Cultura, subcultura e classe social são exemplos de fatores:",
+    options: [
+      "Pessoais.",
+      "Sociais.",
+      "Culturais.",
+      "Psicológicos."
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 4,
+    type: "mcq",
+    text: "4. Família, grupos de referência e líderes de opinião são fatores:",
+    options: [
+      "Culturais.",
+      "Sociais.",
+      "Psicológicos.",
+      "Demográficos."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 5,
+    type: "mcq",
+    text: "5. Idade, ocupação e estilo de vida são considerados fatores:",
+    options: [
+      "Pessoais.",
+      "Culturais.",
+      "Tecnológicos.",
+      "Políticos."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 6,
+    type: "mcq",
+    text: "6. De acordo com Maslow, necessidades de segurança vêm:",
+    options: [
+      "Antes das necessidades fisiológicas.",
+      "Depois das necessidades fisiológicas.",
+      "Depois da autorrealização.",
+      "Depois da estima."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 7,
+    type: "mcq",
+    text: "7. 'Perceção' em marketing é:",
+    options: [
+      "Apenas o preço pago.",
+      "Processo de selecionar, organizar e interpretar informação.",
+      "Apenas memória de anúncios.",
+      "Número de compras por ano."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 8,
+    type: "mcq",
+    text: "8. Atenção, distorção e retenção seletivas significam que:",
+    options: [
+      "As pessoas processam toda a informação igualmente.",
+      "As pessoas filtram e interpretam informação de forma parcial.",
+      "Os consumidores nunca mudam de opinião.",
+      "A memória não influencia decisões."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 9,
+    type: "mcq",
+    text: "9. Uma atitude é:",
+    options: [
+      "Um comportamento físico.",
+      "Uma avaliação ou sentimento relativamente duradouro em relação a um objeto ou ideia.",
+      "Um hábito de compra obrigatoriamente positivo.",
+      "Apenas uma crença factual."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 10,
+    type: "mcq",
+    text: "10. Num comportamento de compra complexa, o consumidor:",
+    options: [
+      "Tem baixo envolvimento e vê poucas diferenças entre marcas.",
+      "Tem alto envolvimento e percebe diferenças significativas entre marcas.",
+      "Compra por impulso sem pensar.",
+      "Compra sempre a marca mais barata."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 11,
+    type: "mcq",
+    text: "11. Compra habitual caracteriza-se por:",
+    options: [
+      "Baixo envolvimento e poucas diferenças percebidas entre marcas.",
+      "Alto envolvimento e grandes diferenças.",
+      "Baixo envolvimento e grandes diferenças.",
+      "Alto envolvimento e nenhuma diferença."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 12,
+    type: "mcq",
+    text: "12. 'Procura de variedade' ocorre quando:",
+    options: [
+      "Consumidor muda de marca por insatisfação séria.",
+      "Há baixo envolvimento mas diferenças percebidas entre marcas.",
+      "Produto é muito caro e arriscado.",
+      "Consumidor está sempre fiel a uma única marca."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 13,
+    type: "mcq",
+    text: "13. Fase em que o consumidor sente uma lacuna entre estado atual e desejado:",
+    options: [
+      "Reconhecimento da necessidade.",
+      "Pesquisa de informação.",
+      "Avaliação de alternativas.",
+      "Comportamento pós-compra."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 14,
+    type: "mcq",
+    text: "14. A dissonância cognitiva pós-compra é:",
+    options: [
+      "Sempre satisfação total.",
+      "Desconforto causado por conflitos após uma compra.",
+      "Fase de avaliação antes da compra.",
+      "Redução de preços após a compra."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 15,
+    type: "mcq",
+    text: "15. No processo de adoção de novos produtos, o 'teste' é a etapa em que o consumidor:",
+    options: [
+      "Primeiro ouve falar do produto.",
+      "Procura ativamente informação.",
+      "Experimenta em pequena escala.",
+      "Decide nunca usar o produto."
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 16,
+    type: "mcq",
+    text: "16. Adotantes iniciais são importantes porque:",
+    options: [
+      "Normalmente rejeitam todas as novidades.",
+      "Têm pouca influência em outros.",
+      "São líderes de opinião que ajudam a difusão do novo produto.",
+      "Aparecem só no fim da difusão."
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 17,
+    type: "mcq",
+    text: "17. Uma característica que acelera a adoção de um novo produto é:",
+    options: [
+      "Baixa vantagem relativa.",
+      "Alta complexidade.",
+      "Alta compatibilidade com valores e hábitos existentes.",
+      "Dificuldade de experimentar em pequena escala."
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 18,
+    type: "mcq",
+    text: "18. 'Vantagem relativa' de um novo produto significa:",
+    options: [
+      "Quão semelhante é às alternativas.",
+      "Quão melhor é percebido em relação às alternativas existentes.",
+      "Quão barato é produzir.",
+      "Quão fácil é imitá-lo."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 19,
+    type: "mcq",
+    text: "19. A jornada do cliente (customer journey) refere-se a:",
+    options: [
+      "Apenas o momento da compra.",
+      "Todas as experiências com a marca antes, durante e depois da compra.",
+      "Apenas o pós-venda técnico.",
+      "Apenas campanhas de publicidade."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 20,
+    type: "mcq",
+    text: "20. Um líder de opinião é:",
+    options: [
+      "Alguém sem qualquer influência em outros consumidores.",
+      "Pessoa que exerce influência social sobre outros por ser respeitada/informada numa área.",
+      "Apenas uma celebridade paga.",
+      "Apenas o diretor de marketing da empresa."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 21,
+    type: "open",
+    text: "21. Resume, em poucas linhas, as 5 etapas do processo de decisão de compra do consumidor.",
+    solution: "Reconhecimento da necessidade; Pesquisa de informação; Avaliação de alternativas; Decisão de compra; Comportamento pós-compra (incluindo satisfação/dissonância e impacto em compras futuras)."
+  },
+  {
+    id: 22,
+    type: "open",
+    text: "22. Dá um exemplo de um produto que gere 'compra complexa' e outro que gere 'compra habitual', explicando porquê.",
+    solution: "Compra complexa: carro novo, caro, arriscado, forte envolvimento, muita comparação. Compra habitual: pasta de dentes do dia a dia, baixo envolvimento, poucas diferenças percebidas, compra por hábito."
+  }
+]
+
+    };
+
+    const quizContainer = document.getElementById("quiz-container");
+
+    function renderQuiz() {
+      let html = `
+        <form id="quiz-form">
+          <p class="quiz-description">${quizData.description}</p>
+      `;
+
+      quizData.questions.forEach(q => {
+        html += `<div class="question" data-qid="${q.id}">
+          <h3>${q.text}</h3>
+        `;
+
+        if (q.type === "mcq") {
+          html += `<ul class="options">`;
+          q.options.forEach((opt, index) => {
+            const inputId = `q${q.id}_opt${index}`;
+html += `
+              <li>
+                <label for="${inputId}">
+                  <input type="radio" name="q${q.id}" id="${inputId}" value="${index}" />
+                  ${opt}
+                </label>
+              </li>`;
+          });
+          html += `</ul>`;
+        } else {
+          html += `<textarea name="q${q.id}" placeholder="Escreve a tua resposta aqui..."></textarea>`;
+        }
+
+        html += `<div class="feedback"></div></div>`;
+      });
+
+      html += `
+        <button type="submit" class="submit-btn">Submeter respostas</button>
+        <div id="quiz-result" class="result" style="display:none;"></div>
+      </form>`;
+
+      quizContainer.innerHTML = html;
+
+      document.getElementById("quiz-form").addEventListener("submit", e => {
+        e.preventDefault();
+        corrigirQuiz();
+      });
+    }
+
+    function corrigirQuiz() {
+      let totalMcq = 0;
+      let correctMcq = 0;
+
+      quizData.questions.forEach(q => {
+        const qDiv = document.querySelector(`.question[data-qid="${q.id}"]`);
+        const feedbackDiv = qDiv.querySelector(".feedback");
+        feedbackDiv.innerHTML = "";
+
+        if (q.type === "mcq") {
+          totalMcq++;
+          const selected = qDiv.querySelector("input[type='radio']:checked");
+          if (!selected) {
+            feedbackDiv.innerHTML = '<div class="result error">Sem resposta.</div>';
+            const correctText = q.options[q.correctIndex];
+            feedbackDiv.innerHTML += '<div class="correct-answer">Solução certa: <span>' + correctText + "</span></div>";
+          } else {
+            const value = parseInt(selected.value, 10);
+            if (value === q.correctIndex) {
+              correctMcq++;
+              feedbackDiv.innerHTML = '<div class="result success">Correto!</div>';
+            } else {
+              feedbackDiv.innerHTML = '<div class="result error">Errado.</div>';
+              const correctText = q.options[q.correctIndex];
+              feedbackDiv.innerHTML += '<div class="correct-answer">Solução certa: <span>' + correctText + "</span></div>";
+            }
+          }
+        } else {
+          const textarea = qDiv.querySelector("textarea");
+          const userAnswer = (textarea.value || "").trim();
+          if (!userAnswer) {
+            feedbackDiv.innerHTML = '<div class="result error">Sem resposta. Vê a sugestão abaixo.</div>';
+          } else {
+            feedbackDiv.innerHTML = '<div class="result success">Resposta registada. Compara com a sugestão abaixo.</div>';
+          }
+          if (q.solution) {
+            feedbackDiv.innerHTML += '<div class="correct-answer">Sugestão de resposta: <span>' + q.solution + "</span></div>";
+          }
+        }
+      });
+
+      const resultDiv = document.getElementById("quiz-result");
+      resultDiv.style.display = "block";
+      resultDiv.className = "result " + (correctMcq === totalMcq ? "success" : "error");
+      resultDiv.textContent = "Acertaste " + correctMcq + " em " + totalMcq + " perguntas de escolha múltipla.";
+    }
+
+    renderQuiz();
+  </script>
+</body>
+</html>

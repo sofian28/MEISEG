@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sofian Marketing Quiz – Capítulo 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1>Sofian Marketing Quiz</h1>
+    <p>Capítulo 2 – Estratégia corporativa e de marketing</p>
+  </header>
+
+  <main class="quiz-wrapper">
+    <a class="back-link" href="index.html">&larr; Voltar ao índice</a>
+
+    <div class="quiz-header">
+      <h2>Capítulo 2</h2>
+      <p>20 perguntas de escolha múltipla + 2 abertas.</p>
+    </div>
+
+    <div id="quiz-container"></div>
+  </main>
+
+  <script>
+    const quizData = {
+      title: "Sofian Marketing Quiz – Capítulo 2",
+      description: "Planeamento estratégico, portefólio de negócios e papel do marketing.",
+      questions: [
+        {
+          id: 1,
+          type: "mcq",
+          text: "1. O objetivo do planeamento estratégico ao nível da empresa é:",
+          options: [
+            "Definir apenas o orçamento anual de marketing.",
+            "Desenvolver e manter uma adequação estratégica entre objetivos/capacidades e oportunidades de mercado.",
+            "Escolher preços para maximizar lucros de curto prazo.",
+            "Definir apenas a estrutura organizacional."
+          ],
+          correctIndex: 1
+        },
+        {
+          id: 2,
+          type: "mcq",
+          text: "2. Uma boa declaração de missão deve ser:",
+          options: [
+            "Definida em termos de produto e tecnologia.",
+            "Muito longa e cheia de detalhes técnicos.",
+            "Orientada para o mercado, focada no cliente.",
+            "Focada apenas em metas financeiras."
+          ],
+          correctIndex: 2
+        },
+        {
+          id: 3,
+          type: "mcq",
+          text: "3. Qual das alternativas NÃO é um dos quatro passos do planeamento estratégico ao nível corporativo?",
+          options: [
+            "Definir a missão da empresa.",
+            "Definir objetivos e metas.",
+            "Desenhar o portefólio de negócios.",
+            "Definir o composto de comunicação (promoção)."
+          ],
+          correctIndex: 3
+        },
+        {
+          id: 4,
+          type: "mcq",
+          text: "4. O que é uma SBU (Strategic Business Unit)?",
+          options: [
+            "Um departamento de recursos humanos.",
+            "Uma unidade ou linha de negócio com missão própria, concorrentes e que pode ser planeada separadamente.",
+            "Apenas um produto individual.",
+            "Uma agência de publicidade externa."
+          ],
+          correctIndex: 1
+        },
+        {
+          id: 5,
+          type: "mcq",
+          text: "5. Na Matriz BCG, uma SBU com alta quota de mercado e alto crescimento é chamada de:",
+          options: [
+            "Vaca leiteira.",
+            "Estrela.",
+            "Ponto de interrogação.",
+            "Cão."
+          ],
+          correctIndex: 1
+        },
+        {
+          id: 6,
+          type: "mcq",
+          text: "6. Qual é a principal função das 'vacas leiteiras' na Matriz BCG?",
+          options: [
+            "Gerar caixa para financiar outras SBUs.",
+            "Testar novos produtos arriscados.",
+            "Servir apenas mercados internacionais.",
+            "Ser descontinuadas rapidamente."
+          ],
+          correctIndex: 0
+        },
+        {
+          id: 7,
+          type: "mcq",
+          text: "7. Uma SBU com baixa quota de mercado em mercado de alto crescimento é:",
+          options: [
+            "Estrela.",
+            "Vaca leiteira.",
+            "Ponto de interrogação.",
+            "Cão."
+          ],
+          correctIndex: 2
+        },
+        {
+          id: 8,
+          type: "mcq",
+          text: "8. Na matriz produto/mercado (Ansoff), vender produtos atuais a mercados atuais chama-se:",
+          options: [
+            "Penetração de mercado.",
+            "Desenvolvimento de mercado.",
+            "Desenvolvimento de produto.",
+            "Diversificação."
+          ],
+          correctIndex: 0
+        },
+        {
+          id: 9,
+          type: "mcq",
+          text: "9. Lançar novos produtos para mercados atuais é um exemplo de:",
+          options: [
+            "Penetração de mercado.",
+            "Desenvolvimento de mercado.",
+            "Desenvolvimento de produto.",
+            "Diversificação."
+          ],
+          correctIndex: 2
+        },
+        {
+          id: 10,
+          type: "mcq",
+          text: "10. Entrar em novos mercados com novos produtos é:",
+          options: [
+            "Desenvolvimento de mercado.",
+            "Diversificação.",
+            "Penetração de mercado.",
+            "Desenvolvimento de produto."
+          ],
+          correctIndex: 1
+        },
+        {
+          id: 11,
+          type: "mcq",
+          text: "11. A 'cadeia de valor' descreve:",
+          options: [
+            "Apenas atividades de marketing.",
+            "O conjunto de departamentos e atividades internas que criam valor.",
+            "A relação apenas com fornecedores.",
+            "A estrutura de preços da empresa."
+          ],
+          correctIndex: 1
+        },
+        {
+          id: 12,
+          type: "mcq",
+          text: "12. 'Value delivery network' (rede de entrega de valor) inclui:",
+          options: [
+            "Apenas a empresa e os clientes.",
+            "Empresa, fornecedores, intermediários e clientes que, juntos, criam valor.",
+            "Apenas revendedores e grossistas.",
+            "Apenas acionistas."
+          ],
+          correctIndex: 1
+        },
+        {
+          id: 13,
+          type: "mcq",
+          text: "13. Segmentação e seleção de mercado-alvo respondem sobretudo a:",
+          options: [
+            "Como vamos criar valor?",
+            "Que clientes vamos servir?",
+            "Qual será o preço?",
+            "Que canais vamos usar?"
+          ],
+          correctIndex: 1
+        },
+        {
+          id: 14,
+          type: "mcq",
+          text: "14. Diferenciação e posicionamento respondem principalmente a:",
+          options: [
+            "Como vamos servir melhor esses clientes.",
+            "Quantas fábricas a empresa precisa.",
+            "Qual o organograma da empresa.",
+            "Qual o nível de stock."
+          ],
+          correctIndex: 0
+        },
+        {
+          id: 15,
+          type: "mcq",
+          text: "15. Segmentação de mercado significa:",
+          options: [
+            "Dividir o mercado em grupos de compradores com necessidades e comportamentos semelhantes.",
+            "Aumentar o preço em segmentos ricos.",
+            "Vender o mesmo produto para todos.",
+            "Reduzir o número de produtos."
+          ],
+          correctIndex: 0
+        },
+        {
+          id: 16,
+          type: "mcq",
+          text: "16. O que é análise SWOT?",
+          options: [
+            "Uma técnica de definição de preço.",
+            "Ferramenta que analisa forças, fraquezas, oportunidades e ameaças.",
+            "Modelo de portefólio de negócios.",
+            "Plano de comunicação digital."
+          ],
+          correctIndex: 1
+        },
+        {
+          id: 17,
+          type: "mcq",
+          text: "17. Na análise SWOT, 'forças' e 'fraquezas' dizem respeito a:",
+          options: [
+            "Fatores internos à empresa.",
+            "Fatores externos à empresa.",
+            "Somente fatores políticos.",
+            "Somente fatores tecnológicos."
+          ],
+          correctIndex: 0
+        },
+        {
+          id: 18,
+          type: "mcq",
+          text: "18. O que mede o ROI de marketing?",
+          options: [
+            "Apenas o número de novos produtos lançados.",
+            "Retorno líquido de um investimento em marketing em relação ao seu custo.",
+            "Somente o aumento de seguidores nas redes sociais.",
+            "Apenas a redução de custos de produção."
+          ],
+          correctIndex: 1
+        },
+        {
+          id: 19,
+          type: "mcq",
+          text: "19. Qual é o foco principal do controlo de marketing?",
+          options: [
+            "Definir missão e visão.",
+            "Comparar resultados reais com objetivos e tomar ações corretivas.",
+            "Criar novos produtos.",
+            "Selecionar fornecedores."
+          ],
+          correctIndex: 1
+        },
+        {
+          id: 20,
+          type: "mcq",
+          text: "20. Uma razão pela qual muitas empresas abandonaram o uso rígido de matrizes de portefólio é que:",
+          options: [
+            "São rápidas e baratas demais.",
+            "São demasiado simples para mercados complexos e mudam lentamente.",
+            "São ilegais em muitos países.",
+            "Impedem qualquer crescimento."
+          ],
+          correctIndex: 1
+        },
+        {
+          id: 21,
+          type: "open",
+          text: "21. Explica, em poucas linhas, a diferença entre 'cadeia de valor' e 'rede de entrega de valor' (value delivery network).",
+          solution: "Cadeia de valor: atividades internas da empresa (conceção, produção, marketing, logística, serviço) que criam valor. Rede de entrega de valor: inclui a empresa + fornecedores + intermediários + clientes que, em conjunto, criam e entregam valor ao cliente final."
+        },
+        {
+          id: 22,
+          type: "open",
+          text: "22. Descreve a matriz produto/mercado (Ansoff) e dá um exemplo simples de cada uma das quatro estratégias.",
+          solution: "Penetração de mercado (produtos atuais, mercados atuais); Desenvolvimento de mercado (produtos atuais, novos mercados); Desenvolvimento de produto (novos produtos, mercados atuais); Diversificação (novos produtos, novos mercados)."
+        }
+      ]
+    };
+
+    const quizContainer = document.getElementById("quiz-container");
+
+    function renderQuiz() {
+      let html = `
+        <form id="quiz-form">
+          <p class="quiz-description">${quizData.description}</p>
+      `;
+
+      quizData.questions.forEach(q => {
+        html += `<div class="question" data-qid="${q.id}">
+          <h3>${q.text}</h3>
+        `;
+
+        if (q.type === "mcq") {
+          html += `<ul class="options">`;
+          q.options.forEach((opt, index) => {
+            const inputId = `q${q.id}_opt${index}`;
+            html += `
+              <li>
+                <label for="${inputId}">
+                  <input type="radio" name="q${q.id}" id="${inputId}" value="${index}" />
+                  ${opt}
+                </label>
+              </li>`;
+          });
+          html += `</ul>`;
+        } else {
+          html += `<textarea name="q${q.id}" placeholder="Escreve a tua resposta aqui..."></textarea>`;
+        }
+
+        html += `<div class="feedback"></div></div>`;
+      });
+
+      html += `
+        <button type="submit" class="submit-btn">Submeter respostas</button>
+        <div id="quiz-result" class="result" style="display:none;"></div>
+      </form>`;
+
+      quizContainer.innerHTML = html;
+
+      document.getElementById("quiz-form").addEventListener("submit", e => {
+        e.preventDefault();
+        corrigirQuiz();
+      });
+    }
+
+    function corrigirQuiz() {
+      let totalMcq = 0;
+      let correctMcq = 0;
+
+      quizData.questions.forEach(q => {
+        const qDiv = document.querySelector(`.question[data-qid="${q.id}"]`);
+        const feedbackDiv = qDiv.querySelector(".feedback");
+        feedbackDiv.innerHTML = "";
+
+        if (q.type === "mcq") {
+          totalMcq++;
+          const selected = qDiv.querySelector("input[type='radio']:checked");
+          if (!selected) {
+            feedbackDiv.innerHTML = '<div class="result error">Sem resposta.</div>';
+            const correctText = q.options[q.correctIndex];
+            feedbackDiv.innerHTML += '<div class="correct-answer">Solução certa: <span>' + correctText + "</span></div>";
+          } else {
+            const value = parseInt(selected.value, 10);
+            if (value === q.correctIndex) {
+              correctMcq++;
+              feedbackDiv.innerHTML = '<div class="result success">Correto!</div>';
+            } else {
+              feedbackDiv.innerHTML = '<div class="result error">Errado.</div>';
+              const correctText = q.options[q.correctIndex];
+              feedbackDiv.innerHTML += '<div class="correct-answer">Solução certa: <span>' + correctText + "</span></div>";
+            }
+          }
+        } else {
+          const textarea = qDiv.querySelector("textarea");
+          const userAnswer = (textarea.value || "").trim();
+          if (!userAnswer) {
+            feedbackDiv.innerHTML = '<div class="result error">Sem resposta. Vê a sugestão abaixo.</div>';
+          } else {
+            feedbackDiv.innerHTML = '<div class="result success">Resposta registada. Compara com a sugestão abaixo.</div>';
+          }
+          if (q.solution) {
+            feedbackDiv.innerHTML += '<div class="correct-answer">Sugestão de resposta: <span>' + q.solution + "</span></div>";
+          }
+        }
+      });
+
+      const resultDiv = document.getElementById("quiz-result");
+      resultDiv.style.display = "block";
+      resultDiv.className = "result " + (correctMcq === totalMcq ? "success" : "error");
+      resultDiv.textContent = "Acertaste " + correctMcq + " em " + totalMcq + " perguntas de escolha múltipla.";
+    }
+
+    renderQuiz();
+  </script>
+</body>
+</html>

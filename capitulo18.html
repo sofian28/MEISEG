@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sofian Marketing Quiz – Capítulo 18</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1>Sofian Marketing Quiz</h1>
+    <p>Vantagem competitiva.</p>
+  </header>
+
+  <main class="quiz-wrapper">
+    <a class="back-link" href="index.html">&larr; Voltar ao índice</a>
+
+    <div class="quiz-header">
+      <h2>Capítulo 18</h2>
+      <p>20 perguntas de escolha múltipla + 2 abertas.</p>
+    </div>
+
+    <div id="quiz-container"></div>
+  </main>
+
+  <script>
+    const quizData = {
+      title: "Sofian Marketing Quiz – Capítulo 18",
+      description: "Vantagem competitiva.",
+     questions: [
+  {
+    id: 1,
+    type: "mcq",
+    text: "1. Vantagem competitiva significa:",
+    options: [
+      "Ter a maior fábrica do setor.",
+      "Conseguir oferecer mais valor e satisfação aos clientes do que os concorrentes.",
+      "Ter o preço mais baixo sempre.",
+      "Ter a publicidade mais cara."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 2,
+    type: "mcq",
+    text: "2. Análise da concorrência inclui, entre outros:",
+    options: [
+      "Ignorar empresas de outros setores.",
+      "Identificar, avaliar e escolher concorrentes a atacar ou evitar.",
+      "Apenas medir vendas próprias.",
+      "Evitar qualquer comparação."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 3,
+    type: "mcq",
+    text: "3. 'Miopia da concorrência' acontece quando a empresa:",
+    options: [
+      "Só olha para a indústria e não para as necessidades do mercado.",
+      "Só olha para clientes.",
+      "Ignora todos os concorrentes.",
+      "Só investe em publicidade."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 4,
+    type: "mcq",
+    text: "4. Na tipologia clássica, liderança de custo total implica:",
+    options: [
+      "Custos mais baixos e possibilidade de praticar preços mais baixos.",
+      "Sempre preços mais altos.",
+      "Ignorar eficiência.",
+      "Focar apenas em nichos."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 5,
+    type: "mcq",
+    text: "5. Estratégia de diferenciação consiste em:",
+    options: [
+      "Oferecer produtos indiferenciados.",
+      "Oferecer linha de produtos e marketing fortemente diferenciados, percebidos como superiores.",
+      "Focar apenas em preço.",
+      "Eliminar investimento em marca."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 6,
+    type: "mcq",
+    text: "6. Estratégia de foco (ou enfoque) significa:",
+    options: [
+      "Atuar em todos os segmentos.",
+      "Atuar muito bem num segmento ou nicho específico.",
+      "Atuar apenas em mercados internacionais.",
+      "Atuar apenas em produtos digitais."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 7,
+    type: "mcq",
+    text: "7. Na abordagem das 'disciplinas de valor', excelência operacional significa:",
+    options: [
+      "Criar produtos de luxo apenas.",
+      "Ser líder em preço e conveniência, com operações muito eficientes.",
+      "Focar em nichos pequenos.",
+      "Evitar automatização."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 8,
+    type: "mcq",
+    text: "8. 'Intimidade com o cliente' como disciplina de valor implica:",
+    options: [
+      "Customizar ofertas para necessidades específicas de clientes/segmentos.",
+      "Ter sempre o menor custo.",
+      "Nunca adaptar produtos.",
+      "Evitar contacto direto com clientes."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 9,
+    type: "mcq",
+    text: "9. 'Liderança de produto' como disciplina de valor significa:",
+    options: [
+      "Lançar o mínimo de inovações possível.",
+      "Manter fluxo contínuo de produtos inovadores, aceitando risco.",
+      "Evitar novas ideias.",
+      "Focar apenas em preço."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 10,
+    type: "mcq",
+    text: "10. Um líder de mercado deve, entre outros, procurar:",
+    options: [
+      "Expandir a procura total e proteger/expandir a sua quota.",
+      "Ignorar novos utilizadores.",
+      "Reduzir a qualidade para cortar custos.",
+      "Evitar inovação."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 11,
+    type: "mcq",
+    text: "11. Um desafiante de mercado normalmente:",
+    options: [
+      "Evita qualquer confronto com o líder.",
+      "Ataca o líder com estratégias agressivas frontais ou indiretas.",
+      "Ignora concorrentes.",
+      "Foca apenas em nichos minúsculos."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 12,
+    type: "mcq",
+    text: "12. Um seguidor de mercado tende a:",
+    options: [
+      "Copiar ou melhorar o líder, evitando confronto direto.",
+      "Atacar o líder frontalmente.",
+      "Inventar novos mercados não contestados.",
+      "Ignorar o mercado existente."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 13,
+    type: "mcq",
+    text: "13. Um nichador de mercado concentra-se em:",
+    options: [
+      "Mercado de massa.",
+      "Nichos bem definidos, procurando alta participação nesses nichos.",
+      "Apenas em ser o mais barato.",
+      "Apenas em publicidade em massa."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 14,
+    type: "mcq",
+    text: "14. Um nicho ideal deve ser:",
+    options: [
+      "Muito pequeno e sem lucro.",
+      "Suficientemente grande, rentável e pouco atrativo para grandes concorrentes.",
+      "Sempre o maior mercado possível.",
+      "Independente das necessidades dos clientes."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 15,
+    type: "mcq",
+    text: "15. 'Estratégia de oceano azul' refere-se a:",
+    options: [
+      "Competir apenas em mercados saturados.",
+      "Criar espaços de mercado não contestados, afastando-se da concorrência direta.",
+      "Baixar preços até ao limite.",
+      "Evitar inovação."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 16,
+    type: "mcq",
+    text: "16. Uma empresa demasiadamente centrada no concorrente tende a:",
+    options: [
+      "Ser apenas reativa, focando em movimentos dos rivais.",
+      "Ignorar completamente os rivais.",
+      "Ver apenas necessidades dos clientes.",
+      "Evitar qualquer análise de mercado."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 17,
+    type: "mcq",
+    text: "17. Uma empresa centrada no cliente:",
+    options: [
+      "Foca-se nas necessidades e mudanças do cliente para encontrar oportunidades.",
+      "Ignora concorrentes e clientes.",
+      "Foca-se apenas na redução de custos.",
+      "Vê apenas quotas de mercado."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 18,
+    type: "mcq",
+    text: "18. Uma empresa centrada no mercado combina:",
+    options: [
+      "Orientação para concorrente e para cliente.",
+      "Apenas orientação para produto.",
+      "Apenas orientação para custo.",
+      "Apenas orientação para vendas."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 19,
+    type: "mcq",
+    text: "19. 'Second mover advantage' descreve:",
+    options: [
+      "Vantagem de ser sempre o primeiro a entrar.",
+      "Benefício de entrar depois do líder, aprendendo com os erros e melhorando a oferta.",
+      "Vantagem de nunca entrar em mercados novos.",
+      "Conceito idêntico a liderança de custo."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 20,
+    type: "mcq",
+    text: "20. Uma empresa 'middle-of-the-roader' (sem posição clara) tende a:",
+    options: [
+      "Ter forte posição competitiva.",
+      "Ser pouco atrativa, por não se destacar em nada.",
+      "Ser líder de custo e de diferenciação ao mesmo tempo.",
+      "Ser obrigatoriamente um nichador."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 21,
+    type: "open",
+    text: "21. Em poucas linhas, descreve as quatro posições competitivas básicas: líder, desafiante, seguidor e nichador.",
+    solution: "Líder: maior quota, define normas, procura expandir o mercado e proteger/expandir quota. Desafiante: empresa que tenta desafiar o líder com ataques agressivos. Seguidor: prefere copiar ou melhorar o líder, evitando confronto direto. Nichador: foca-se em nichos específicos, procurando elevada participação e alta rentabilidade nesses segmentos estreitos."
+  },
+  {
+    id: 22,
+    type: "open",
+    text: "22. Dá um exemplo de empresa que segue uma estratégia 'oceano azul' e explica porquê.",
+    solution: "Exemplo típico: uma empresa que cria um novo modelo de negócio ou categoria de produto, com pouca concorrência direta (por exemplo, uma marca que vende produtos diretos ao consumidor online numa categoria antes dominada por lojas físicas), afastando-se da competição tradicional de preço e características."
+  }
+]
+
+
+
+
+    };
+
+    const quizContainer = document.getElementById("quiz-container");
+
+    function renderQuiz() {
+      let html = `
+        <form id="quiz-form">
+          <p class="quiz-description">${quizData.description}</p>
+      `;
+
+      quizData.questions.forEach(q => {
+        html += `<div class="question" data-qid="${q.id}">
+          <h3>${q.text}</h3>
+        `;
+
+        if (q.type === "mcq") {
+          html += `<ul class="options">`;
+          q.options.forEach((opt, index) => {
+            const inputId = `q${q.id}_opt${index}`;
+html += `
+              <li>
+                <label for="${inputId}">
+                  <input type="radio" name="q${q.id}" id="${inputId}" value="${index}" />
+                  ${opt}
+                </label>
+              </li>`;
+          });
+          html += `</ul>`;
+        } else {
+          html += `<textarea name="q${q.id}" placeholder="Escreve a tua resposta aqui..."></textarea>`;
+        }
+
+        html += `<div class="feedback"></div></div>`;
+      });
+
+      html += `
+        <button type="submit" class="submit-btn">Submeter respostas</button>
+        <div id="quiz-result" class="result" style="display:none;"></div>
+      </form>`;
+
+      quizContainer.innerHTML = html;
+
+      document.getElementById("quiz-form").addEventListener("submit", e => {
+        e.preventDefault();
+        corrigirQuiz();
+      });
+    }
+
+    function corrigirQuiz() {
+      let totalMcq = 0;
+      let correctMcq = 0;
+
+      quizData.questions.forEach(q => {
+        const qDiv = document.querySelector(`.question[data-qid="${q.id}"]`);
+        const feedbackDiv = qDiv.querySelector(".feedback");
+        feedbackDiv.innerHTML = "";
+
+        if (q.type === "mcq") {
+          totalMcq++;
+          const selected = qDiv.querySelector("input[type='radio']:checked");
+          if (!selected) {
+            feedbackDiv.innerHTML = '<div class="result error">Sem resposta.</div>';
+            const correctText = q.options[q.correctIndex];
+            feedbackDiv.innerHTML += '<div class="correct-answer">Solução certa: <span>' + correctText + "</span></div>";
+          } else {
+            const value = parseInt(selected.value, 10);
+            if (value === q.correctIndex) {
+              correctMcq++;
+              feedbackDiv.innerHTML = '<div class="result success">Correto!</div>';
+            } else {
+              feedbackDiv.innerHTML = '<div class="result error">Errado.</div>';
+              const correctText = q.options[q.correctIndex];
+              feedbackDiv.innerHTML += '<div class="correct-answer">Solução certa: <span>' + correctText + "</span></div>";
+            }
+          }
+        } else {
+          const textarea = qDiv.querySelector("textarea");
+          const userAnswer = (textarea.value || "").trim();
+          if (!userAnswer) {
+            feedbackDiv.innerHTML = '<div class="result error">Sem resposta. Vê a sugestão abaixo.</div>';
+          } else {
+            feedbackDiv.innerHTML = '<div class="result success">Resposta registada. Compara com a sugestão abaixo.</div>';
+          }
+          if (q.solution) {
+            feedbackDiv.innerHTML += '<div class="correct-answer">Sugestão de resposta: <span>' + q.solution + "</span></div>";
+          }
+        }
+      });
+
+      const resultDiv = document.getElementById("quiz-result");
+      resultDiv.style.display = "block";
+      resultDiv.className = "result " + (correctMcq === totalMcq ? "success" : "error");
+      resultDiv.textContent = "Acertaste " + correctMcq + " em " + totalMcq + " perguntas de escolha múltipla.";
+    }
+
+    renderQuiz();
+  </script>
+</body>
+</html>
