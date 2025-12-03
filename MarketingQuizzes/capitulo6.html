@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sofian Marketing Quiz – Capítulo 6</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1>Sofian Marketing Quiz</h1>
+    <p>Mercados de negócios (B2B).</p>
+  </header>
+
+  <main class="quiz-wrapper">
+    <a class="back-link" href="index.html">&larr; Voltar ao índice</a>
+
+    <div class="quiz-header">
+      <h2>Capítulo 6</h2>
+      <p>20 perguntas de escolha múltipla + 2 abertas.</p>
+    </div>
+
+    <div id="quiz-container"></div>
+  </main>
+
+  <script>
+    const quizData = {
+      title: "Sofian Marketing Quiz – Capítulo 6",
+      description: "Mercados de negócios (B2B).",
+     questions: [
+  {
+    id: 1,
+    type: "mcq",
+    text: "1. Comportamento de compra empresarial diz respeito a:",
+    options: [
+      "Como indivíduos compram para uso pessoal.",
+      "Como organizações compram bens e serviços para produzir outros produtos/serviços.",
+      "Como governos cobram impostos.",
+      "Apenas compras online de consumidores."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 2,
+    type: "mcq",
+    text: "2. Um mercado B2B tende a ter:",
+    options: [
+      "Muitos compradores pequenos e dispersos.",
+      "Poucos compradores, mas maiores em volume.",
+      "Apenas consumidores finais.",
+      "Nenhum relacionamento de longo prazo."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 3,
+    type: "mcq",
+    text: "3. 'Procura derivada' significa que a procura B2B:",
+    options: [
+      "É independente da procura de consumo.",
+      "Depende da procura pelos produtos finais de consumo.",
+      "Não se altera com o tempo.",
+      "É sempre maior que a de consumo."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 4,
+    type: "mcq",
+    text: "4. O 'centro de compras' (buying center) inclui:",
+    options: [
+      "Apenas o diretor financeiro.",
+      "Todas as pessoas e unidades envolvidas na decisão de compra.",
+      "Apenas o departamento de marketing.",
+      "Apenas o departamento de compras."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 5,
+    type: "mcq",
+    text: "5. No centro de compras, 'utilizadores' são:",
+    options: [
+      "Quem aprova o orçamento.",
+      "Quem efetivamente vai usar o produto ou serviço.",
+      "Quem controla o fluxo de informação.",
+      "Quem representa concorrentes."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 6,
+    type: "mcq",
+    text: "6. 'Gatekeepers' no centro de compras:",
+    options: [
+      "Controlam entradas físicas na empresa.",
+      "Controlam o fluxo de informação para outros participantes da decisão.",
+      "Tomam sempre a decisão final.",
+      "Não têm influência real."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 7,
+    type: "mcq",
+    text: "7. Uma 'compra direta' (straight rebuy) é:",
+    options: [
+      "Compra de um produto novo, complexo.",
+      "Reabastecimento rotineiro sem alterações significativas.",
+      "Compra de um sistema completo a vários fornecedores.",
+      "Compra apenas em leilões."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 8,
+    type: "mcq",
+    text: "8. 'Nova tarefa' (new task) em compra B2B significa:",
+    options: [
+      "Compra totalmente nova para a organização, com mais informação e etapas.",
+      "Compra repetida e automática.",
+      "Compra em que não há avaliação de alternativas.",
+      "Compra apenas de serviços."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 9,
+    type: "mcq",
+    text: "9. Uma 'compra modificada' (modified rebuy) ocorre quando:",
+    options: [
+      "A empresa compra exatamente igual ao passado.",
+      "Quer alterar especificações, preço, condições ou fornecedor.",
+      "Compra apenas a prazo.",
+      "Compra apenas no estrangeiro."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 10,
+    type: "mcq",
+    text: "10. 'Solution selling' ou compra de sistemas acontece quando:",
+    options: [
+      "A empresa compra apenas componentes separados.",
+      "Um fornecedor oferece solução completa em vez de produtos isolados.",
+      "Não há relação de longo prazo.",
+      "Só se compra software."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 11,
+    type: "mcq",
+    text: "11. A primeira etapa típica do processo de decisão de compra empresarial é:",
+    options: [
+      "Solicitação de propostas.",
+      "Reconhecimento do problema ou necessidade.",
+      "Seleção do fornecedor.",
+      "Avaliação de desempenho."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 12,
+    type: "mcq",
+    text: "12. A 'análise de valor' na compra B2B procura:",
+    options: [
+      "Aumentar custos de forma controlada.",
+      "Descobrir maneiras mais baratas de produzir sem perder desempenho.",
+      "Eliminar fornecedores.",
+      "Evitar qualquer mudança de produto."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 13,
+    type: "mcq",
+    text: "13. O que é 'e‑procurement'?",
+    options: [
+      "Compra apenas por telefone.",
+      "Processos de compra eletrónica e online.",
+      "Compra sempre presencial.",
+      "Uma forma de marketing direto ao consumidor."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 14,
+    type: "mcq",
+    text: "14. Uma vantagem do e‑procurement para compradores é:",
+    options: [
+      "Aumentar burocracia.",
+      "Acesso mais fácil a novos fornecedores e redução de custos de processo.",
+      "Eliminar qualquer concorrência entre fornecedores.",
+      "Impossibilidade de comparar propostas."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 15,
+    type: "mcq",
+    text: "15. Um risco do e‑procurement para relações tradicionais é que:",
+    options: [
+      "Fortalece laços pessoais.",
+      "Facilita que compradores mudem de fornecedor com mais facilidade.",
+      "Impede transparência de preços.",
+      "Reduz totalmente a concorrência."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 16,
+    type: "mcq",
+    text: "16. Mercados institucionais incluem:",
+    options: [
+      "Apenas famílias.",
+      "Escolas, hospitais, lares e prisões que compram para servir pessoas sob os seus cuidados.",
+      "Apenas empresas exportadoras.",
+      "Apenas bancos centrais."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 17,
+    type: "mcq",
+    text: "17. Característica típica dos mercados governamentais:",
+    options: [
+      "Compram sem regras.",
+      "Normalmente usam propostas formais e muitas vezes escolhem o licitante de menor preço.",
+      "Não favorecem fornecedores nacionais.",
+      "Compram sempre diretamente a consumidores."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 18,
+    type: "mcq",
+    text: "18. Fatores ambientais que influenciam o comportamento de compra B2B incluem:",
+    options: [
+      "Apenas gostos pessoais de um comprador.",
+      "Condições económicas, tecnológicas, políticas e competitivas.",
+      "Apenas o clima.",
+      "Apenas o layout do escritório."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 19,
+    type: "mcq",
+    text: "19. Fatores organizacionais no B2B referem-se a:",
+    options: [
+      "Metas, políticas, estrutura e sistemas da organização compradora.",
+      "Apenas motivações individuais.",
+      "Apenas leis governamentais.",
+      "Apenas tecnologias digitais."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 20,
+    type: "mcq",
+    text: "20. 'Desenvolvimento de fornecedores' (supplier development) significa:",
+    options: [
+      "Reduzir ao mínimo o número de fornecedores.",
+      "Trabalhar com fornecedores para melhorar continuamente desempenho e capacidade.",
+      "Ignorar relações de longo prazo.",
+      "Comprar sempre ao mais barato sem avaliação."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 21,
+    type: "open",
+    text: "21. Explica, em poucas linhas, as diferenças entre compra direta, compra modificada e nova tarefa no contexto B2B.",
+    solution: "Compra direta: recompra rotineira do mesmo produto, mesmo fornecedor. Compra modificada: recompra com alterações em especificações, preço, condições ou fornecedor. Nova tarefa: compra totalmente nova, com mais participantes, mais informação e processo mais longo."
+  },
+  {
+    id: 22,
+    type: "open",
+    text: "22. Dá um exemplo de como o e‑procurement pode melhorar a eficiência de compras numa empresa.",
+    solution: "Por exemplo, usar um portal online para enviar pedidos de cotação a vários fornecedores, comparar automaticamente preços e prazos, aprovar internamente e emitir encomendas eletrónicas, reduzindo papel, tempo de processamento e erros."
+  }
+]
+
+
+    };
+
+    const quizContainer = document.getElementById("quiz-container");
+
+    function renderQuiz() {
+      let html = `
+        <form id="quiz-form">
+          <p class="quiz-description">${quizData.description}</p>
+      `;
+
+      quizData.questions.forEach(q => {
+        html += `<div class="question" data-qid="${q.id}">
+          <h3>${q.text}</h3>
+        `;
+
+        if (q.type === "mcq") {
+          html += `<ul class="options">`;
+          q.options.forEach((opt, index) => {
+            const inputId = `q${q.id}_opt${index}`;
+html += `
+              <li>
+                <label for="${inputId}">
+                  <input type="radio" name="q${q.id}" id="${inputId}" value="${index}" />
+                  ${opt}
+                </label>
+              </li>`;
+          });
+          html += `</ul>`;
+        } else {
+          html += `<textarea name="q${q.id}" placeholder="Escreve a tua resposta aqui..."></textarea>`;
+        }
+
+        html += `<div class="feedback"></div></div>`;
+      });
+
+      html += `
+        <button type="submit" class="submit-btn">Submeter respostas</button>
+        <div id="quiz-result" class="result" style="display:none;"></div>
+      </form>`;
+
+      quizContainer.innerHTML = html;
+
+      document.getElementById("quiz-form").addEventListener("submit", e => {
+        e.preventDefault();
+        corrigirQuiz();
+      });
+    }
+
+    function corrigirQuiz() {
+      let totalMcq = 0;
+      let correctMcq = 0;
+
+      quizData.questions.forEach(q => {
+        const qDiv = document.querySelector(`.question[data-qid="${q.id}"]`);
+        const feedbackDiv = qDiv.querySelector(".feedback");
+        feedbackDiv.innerHTML = "";
+
+        if (q.type === "mcq") {
+          totalMcq++;
+          const selected = qDiv.querySelector("input[type='radio']:checked");
+          if (!selected) {
+            feedbackDiv.innerHTML = '<div class="result error">Sem resposta.</div>';
+            const correctText = q.options[q.correctIndex];
+            feedbackDiv.innerHTML += '<div class="correct-answer">Solução certa: <span>' + correctText + "</span></div>";
+          } else {
+            const value = parseInt(selected.value, 10);
+            if (value === q.correctIndex) {
+              correctMcq++;
+              feedbackDiv.innerHTML = '<div class="result success">Correto!</div>';
+            } else {
+              feedbackDiv.innerHTML = '<div class="result error">Errado.</div>';
+              const correctText = q.options[q.correctIndex];
+              feedbackDiv.innerHTML += '<div class="correct-answer">Solução certa: <span>' + correctText + "</span></div>";
+            }
+          }
+        } else {
+          const textarea = qDiv.querySelector("textarea");
+          const userAnswer = (textarea.value || "").trim();
+          if (!userAnswer) {
+            feedbackDiv.innerHTML = '<div class="result error">Sem resposta. Vê a sugestão abaixo.</div>';
+          } else {
+            feedbackDiv.innerHTML = '<div class="result success">Resposta registada. Compara com a sugestão abaixo.</div>';
+          }
+          if (q.solution) {
+            feedbackDiv.innerHTML += '<div class="correct-answer">Sugestão de resposta: <span>' + q.solution + "</span></div>";
+          }
+        }
+      });
+
+      const resultDiv = document.getElementById("quiz-result");
+      resultDiv.style.display = "block";
+      resultDiv.className = "result " + (correctMcq === totalMcq ? "success" : "error");
+      resultDiv.textContent = "Acertaste " + correctMcq + " em " + totalMcq + " perguntas de escolha múltipla.";
+    }
+
+    renderQuiz();
+  </script>
+</body>
+</html>

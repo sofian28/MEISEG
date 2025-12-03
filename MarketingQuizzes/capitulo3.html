@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sofian Marketing Quiz – Capítulo 3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1>Sofian Marketing Quiz</h1>
+    <p>Capítulo 3 – Análise do ambiente de marketing</p>
+  </header>
+
+  <main class="quiz-wrapper">
+    <a class="back-link" href="index.html">&larr; Voltar ao índice</a>
+
+    <div class="quiz-header">
+      <h2>Capítulo 3</h2>
+      <p>20 perguntas de escolha múltipla + 2 abertas.</p>
+    </div>
+
+    <div id="quiz-container"></div>
+  </main>
+
+  <script>
+    const quizData = {
+      title: "Sofian Marketing Quiz – Capítulo 3",
+      description: "Microambiente e macroambiente de marketing.",
+      questions: [
+{
+id: 1,
+type: "mcq",
+text: "1. O microambiente de marketing inclui:",
+options: [
+"Apenas forças demográficas e tecnológicas.",
+"Atores próximos à empresa que afetam a sua capacidade de servir clientes.",
+"Apenas concorrentes diretos.",
+"Apenas fatores culturais."
+],
+correctIndex: 1
+},
+{
+id: 2,
+type: "mcq",
+text: "2. Qual destes NÃO é um ator típico do microambiente:",
+options: [
+"Fornecedores.",
+"Intermediários de marketing.",
+"Públicos.",
+"Forças demográficas globais."
+],
+correctIndex: 3
+},
+{
+id: 3,
+type: "mcq",
+text: "3. O macroambiente é definido como:",
+options: [
+"O conjunto de departamentos internos da empresa.",
+"As forças sociais amplas que afetam o microambiente.",
+"Apenas os concorrentes internacionais.",
+"Apenas os clientes-chave."
+],
+correctIndex: 1
+},
+{
+id: 4,
+type: "mcq",
+text: "4. O estudo das populações humanas em termos de tamanho, densidade, idade e localização chama-se:",
+options: [
+"Psicografia.",
+"Demografia.",
+"Econometria.",
+"Etnografia."
+],
+correctIndex: 1
+},
+{
+id: 5,
+type: "mcq",
+text: "5. Qual destas forças NÃO pertence normalmente ao macroambiente descrito no capítulo?",
+options: [
+"Demográfica.",
+"Económica.",
+"Natural.",
+"Satisfação do cliente individual."
+],
+correctIndex: 3
+},
+{
+id: 6,
+type: "mcq",
+text: "6. Uma característica central da Geração Z é:",
+options: [
+"Ter crescido antes da TV.",
+"Ser nativa digital, muito ligada a tecnologia e redes sociais.",
+"Rejeitar totalmente tecnologia.",
+"Ser maioritariamente analfabeta digital."
+],
+correctIndex: 1
+},
+{
+id: 7,
+type: "mcq",
+text: "7. O ambiente económico afeta o marketing principalmente porque:",
+options: [
+"Define a estrutura familiar.",
+"Determina poder de compra e padrões de consumo.",
+"Substitui a necessidade de segmentação.",
+"Elimina a concorrência."
+],
+correctIndex: 1
+},
+{
+id: 8,
+type: "mcq",
+text: "8. Qual é uma tendência importante no ambiente natural mencionada no capítulo?",
+options: [
+"Diminuição da intervenção governamental.",
+"Aumento da abundância de recursos não renováveis.",
+"Maior escassez de matérias-primas e preocupação com poluição.",
+"Fim das preocupações ambientais nas empresas."
+],
+correctIndex: 2
+},
+{
+id: 9,
+type: "mcq",
+text: "9. 'Sustentabilidade ambiental' em marketing significa:",
+options: [
+"Focar apenas nos lucros de curto prazo.",
+"Ignorar regulamentação ambiental.",
+"Desenvolver estratégias que satisfaçam o presente sem comprometer o futuro.",
+"Produzir ao máximo sem considerar impactos."
+],
+correctIndex: 2
+},
+{
+id: 10,
+type: "mcq",
+text: "10. O ambiente tecnológico é descrito como:",
+options: [
+"A força menos relevante para o marketing.",
+"Uma força estável que muda pouco.",
+"A força que mais dramaticamente molda novas oportunidades de mercado.",
+"Apenas referente à publicidade online."
+],
+correctIndex: 2
+},
+{
+id: 11,
+type: "mcq",
+text: "11. A legislação de marketing existe principalmente para:",
+options: [
+"Proteger empresas umas das outras, consumidores e a sociedade.",
+"Eliminar toda a concorrência.",
+"Substituir o papel dos gestores.",
+"Garantir que as empresas não inovem."
+],
+correctIndex: 0
+},
+{
+id: 12,
+type: "mcq",
+text: "12. 'Marketing com causa' (cause-related marketing) é:",
+options: [
+"Qualquer campanha que ignore causas sociais.",
+"Ligar a marca ou compra a uma causa social ou ambiental.",
+"Uma forma de reduzir a transparência.",
+"Ilegal em todos os mercados."
+],
+correctIndex: 1
+},
+{
+id: 13,
+type: "mcq",
+text: "13. Crenças e valores primários numa cultura são:",
+options: [
+"Fáceis de mudar por campanhas de marketing.",
+"Profundamente enraizados e transmitidos de geração em geração.",
+"Sempre criados pela publicidade.",
+"Irrelevantes para o marketing."
+],
+correctIndex: 1
+},
+{
+id: 14,
+type: "mcq",
+text: "14. Crenças e valores secundários:",
+options: [
+"São imutáveis.",
+"São mais abertos à mudança e podem ser influenciados pelo marketing.",
+"São apenas religiosos.",
+"Não afetam preferências de consumo."
+],
+correctIndex: 1
+},
+{
+id: 15,
+type: "mcq",
+text: "15. Uma tendência cultural citada no capítulo é:",
+options: [
+"A diminuição total da preocupação com saúde.",
+"O crescimento da procura por produtos naturais e orgânicos.",
+"O desaparecimento de diversidade.",
+"O fim da preocupação ambiental dos consumidores."
+],
+correctIndex: 1
+},
+{
+id: 16,
+type: "mcq",
+text: "16. Uma empresa 'reativa' em relação ao ambiente de marketing:",
+options: [
+"Tenta ativamente moldar o ambiente.",
+"Aceita as forças ambientais como dadas e reage a elas.",
+"Controla todas as forças externas.",
+"Ignora totalmente concorrentes e clientes."
+],
+correctIndex: 1
+},
+{
+id: 17,
+type: "mcq",
+text: "17. Uma empresa 'proativa' em relação ao ambiente tende a:",
+options: [
+"Apenas seguir concorrentes.",
+"Recusar qualquer mudança.",
+"Desenvolver estratégias para influenciar o ambiente e criar oportunidades.",
+"Evitar inovação."
+],
+correctIndex: 2
+},
+{
+id: 18,
+type: "mcq",
+text: "18. No capítulo, um risco das redes sociais para empresas é que:",
+options: [
+"Os clientes deixam de comunicar.",
+"Críticas podem tornar-se virais rapidamente e gerar crises.",
+"Elas eliminam a necessidade de serviço ao cliente.",
+"É impossível monitorizar conversas online."
+],
+correctIndex: 1
+},
+{
+id: 19,
+type: "mcq",
+text: "19. No contexto do capítulo, 'públicos' (publics) referem-se a:",
+options: [
+"Apenas consumidores finais.",
+"Qualquer grupo que tenha interesse real ou potencial na empresa.",
+"Apenas meios de comunicação.",
+"Apenas acionistas."
+],
+correctIndex: 1
+},
+{
+id: 20,
+type: "mcq",
+text: "20. O ambiente demográfico está a mudar, entre outros motivos, por:",
+options: [
+"Redução da diversidade étnica.",
+"Estruturas familiares estáveis e todas iguais.",
+"Maior diversidade, mobilidade geográfica e níveis de educação.",
+"Fim das migrações internas e externas."
+],
+correctIndex: 2
+},
+{
+id: 21,
+type: "open",
+text: "21. Explica, em poucas linhas, a diferença entre microambiente e macroambiente de marketing e dá um exemplo de cada.",
+solution: "Microambiente: atores próximos (empresa, fornecedores, intermediários, concorrentes, públicos, clientes) que afetam a capacidade de servir clientes; ex.: um grande retalhista parceiro. Macroambiente: forças amplas (demográficas, económicas, naturais, tecnológicas, políticas, culturais); ex.: envelhecimento da população, crise económica, novas tecnologias digitais."
+},
+{
+id: 22,
+type: "open",
+text: "22. Dá um exemplo de como uma empresa pode adotar uma postura proativa face a uma tendência ambiental ou tecnológica.",
+solution: "Por exemplo, uma empresa que antecipa maior preocupação ambiental e lança cedo uma linha ecológica, investe em embalagens recicláveis e comunica sustentabilidade, em vez de apenas reagir quando a legislação obriga ou quando concorrentes já o fazem."
+}
+]
+    };
+
+    const quizContainer = document.getElementById("quiz-container");
+
+    function renderQuiz() {
+      let html = `
+        <form id="quiz-form">
+          <p class="quiz-description">${quizData.description}</p>
+      `;
+
+      quizData.questions.forEach(q => {
+        html += `<div class="question" data-qid="${q.id}">
+          <h3>${q.text}</h3>
+        `;
+
+        if (q.type === "mcq") {
+          html += `<ul class="options">`;
+          q.options.forEach((opt, index) => {
+            const inputId = `q${q.id}_opt${index}`;
+html += `
+              <li>
+                <label for="${inputId}">
+                  <input type="radio" name="q${q.id}" id="${inputId}" value="${index}" />
+                  ${opt}
+                </label>
+              </li>`;
+
+          });
+          html += `</ul>`;
+        } else {
+          html += `<textarea name="q${q.id}" placeholder="Escreve a tua resposta aqui..."></textarea>`;
+        }
+
+        html += `<div class="feedback"></div></div>`;
+      });
+
+      html += `
+        <button type="submit" class="submit-btn">Submeter respostas</button>
+        <div id="quiz-result" class="result" style="display:none;"></div>
+      </form>`;
+
+      quizContainer.innerHTML = html;
+
+      document.getElementById("quiz-form").addEventListener("submit", e => {
+        e.preventDefault();
+        corrigirQuiz();
+      });
+    }
+
+    function corrigirQuiz() {
+      let totalMcq = 0;
+      let correctMcq = 0;
+
+      quizData.questions.forEach(q => {
+        const qDiv = document.querySelector(`.question[data-qid="${q.id}"]`);
+        const feedbackDiv = qDiv.querySelector(".feedback");
+        feedbackDiv.innerHTML = "";
+
+        if (q.type === "mcq") {
+          totalMcq++;
+          const selected = qDiv.querySelector("input[type='radio']:checked");
+          if (!selected) {
+            feedbackDiv.innerHTML = '<div class="result error">Sem resposta.</div>';
+            const correctText = q.options[q.correctIndex];
+            feedbackDiv.innerHTML += '<div class="correct-answer">Solução certa: <span>' + correctText + "</span></div>";
+          } else {
+            const value = parseInt(selected.value, 10);
+            if (value === q.correctIndex) {
+              correctMcq++;
+              feedbackDiv.innerHTML = '<div class="result success">Correto!</div>';
+            } else {
+              feedbackDiv.innerHTML = '<div class="result error">Errado.</div>';
+              const correctText = q.options[q.correctIndex];
+              feedbackDiv.innerHTML += '<div class="correct-answer">Solução certa: <span>' + correctText + "</span></div>";
+            }
+          }
+        } else {
+          const textarea = qDiv.querySelector("textarea");
+          const userAnswer = (textarea.value || "").trim();
+          if (!userAnswer) {
+            feedbackDiv.innerHTML = '<div class="result error">Sem resposta. Vê a sugestão abaixo.</div>';
+          } else {
+            feedbackDiv.innerHTML = '<div class="result success">Resposta registada. Compara com a sugestão abaixo.</div>';
+          }
+          if (q.solution) {
+            feedbackDiv.innerHTML += '<div class="correct-answer">Sugestão de resposta: <span>' + q.solution + "</span></div>";
+          }
+        }
+      });
+
+      const resultDiv = document.getElementById("quiz-result");
+      resultDiv.style.display = "block";
+      resultDiv.className = "result " + (correctMcq === totalMcq ? "success" : "error");
+      resultDiv.textContent = "Acertaste " + correctMcq + " em " + totalMcq + " perguntas de escolha múltipla.";
+    }
+
+    renderQuiz();
+  </script>
+</body>
+</html>

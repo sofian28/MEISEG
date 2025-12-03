@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sofian Marketing Quiz – Capítulo 19</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1>Sofian Marketing Quiz</h1>
+    <p>Marketing global.</p>
+  </header>
+
+  <main class="quiz-wrapper">
+    <a class="back-link" href="index.html">&larr; Voltar ao índice</a>
+
+    <div class="quiz-header">
+      <h2>Capítulo 18</h2>
+      <p>20 perguntas de escolha múltipla + 2 abertas.</p>
+    </div>
+
+    <div id="quiz-container"></div>
+  </main>
+
+  <script>
+    const quizData = {
+      title: "Sofian Marketing Quiz – Capítulo 19",
+      description: "Marketing global.",
+     questions: [
+  {
+    id: 1,
+    type: "mcq",
+    text: "1. Uma empresa verdadeiramente global:",
+    options: [
+      "Vê cada país como totalmente isolado.",
+      "Vê o mundo como um único mercado e coordena atividades em vários países.",
+      "Opera apenas no seu país de origem.",
+      "É obrigada a padronizar tudo."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 2,
+    type: "mcq",
+    text: "2. Uma razão comum para uma empresa entrar em mercados internacionais é:",
+    options: [
+      "Fugir de qualquer concorrência.",
+      "Procurar crescimento, novas oportunidades e economias de escala.",
+      "Evitar contacto com clientes.",
+      "Reduzir a qualidade dos produtos."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 3,
+    type: "mcq",
+    text: "3. Tarifas (pautas alfandegárias) são:",
+    options: [
+      "Impostos sobre importações.",
+      "Limites quantitativos às importações.",
+      "Restrições cambiais.",
+      "Incentivos à exportação."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 4,
+    type: "mcq",
+    text: "4. Quotas de importação são:",
+    options: [
+      "Impostos sobre vendas internas.",
+      "Limites à quantidade de um produto que pode ser importado.",
+      "Proibições totais de comércio.",
+      "Taxas sobre exportações."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 5,
+    type: "mcq",
+    text: "5. A OMC (Organização Mundial do Comércio) tem como função principal:",
+    options: [
+      "Criar campanhas de marketing global.",
+      "Regular e facilitar o comércio entre países, resolvendo disputas.",
+      "Definir preços de todos os produtos.",
+      "Produzir bens para países membros."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 6,
+    type: "mcq",
+    text: "6. Um bloco económico como a União Europeia é:",
+    options: [
+      "Apenas uma união política.",
+      "Uma área de comércio com redução de barreiras entre países membros.",
+      "Uma agência publicitária.",
+      "Um organismo que define todas as campanhas de marketing."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 7,
+    type: "mcq",
+    text: "7. Ao avaliar o ambiente económico de um país, uma empresa deve considerar:",
+    options: [
+      "Tipo de economia e distribuição de rendimento.",
+      "Apenas a língua oficial.",
+      "Apenas o clima.",
+      "Apenas o número de turistas."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 8,
+    type: "mcq",
+    text: "8. O ambiente cultural é importante porque:",
+    options: [
+      "Todos os países têm exatamente a mesma cultura.",
+      "Valores, normas e hábitos locais afetam como o marketing é percebido.",
+      "Não influencia decisões.",
+      "Substitui leis e regulamentos."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 9,
+    type: "mcq",
+    text: "9. Exportação indireta significa que:",
+    options: [
+      "A empresa vende diretamente a clientes estrangeiros.",
+      "A empresa utiliza intermediários locais para vender no exterior.",
+      "A empresa produz no país-alvo.",
+      "A empresa cria uma subsidiária própria."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 10,
+    type: "mcq",
+    text: "10. Uma joint‑venture é:",
+    options: [
+      "Investimento 100% próprio da empresa estrangeira.",
+      "Parceria com empresa local para produzir ou comercializar em conjunto.",
+      "Apenas um contrato de publicidade.",
+      "Apenas uma relação de fornecedor."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 11,
+    type: "mcq",
+    text: "11. Licenciamento (licensing) implica que:",
+    options: [
+      "A empresa perde a marca.",
+      "Uma empresa local usa marca ou tecnologia de outra em troca de taxas/royalties.",
+      "Não há qualquer contrato.",
+      "A empresa estrangeira controla tudo diretamente."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 12,
+    type: "mcq",
+    text: "12. Investimento direto no exterior significa:",
+    options: [
+      "Vender apenas via exportação.",
+      "Criar ou adquirir instalações de produção ou montagem no país estrangeiro.",
+      "Apenas contratar agentes.",
+      "Apenas fazer publicidade no país-alvo."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 13,
+    type: "mcq",
+    text: "13. Marketing‑mix padronizado em mercados globais significa:",
+    options: [
+      "Mesmo produto e mesma estratégia de marketing em todos os países.",
+      "Produtos e marketing totalmente diferentes em cada país.",
+      "Apenas adaptar preços.",
+      "Apenas adaptar promoção."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 14,
+    type: "mcq",
+    text: "14. Marketing‑mix adaptado significa que a empresa:",
+    options: [
+      "Usa exatamente a mesma abordagem em todo o lado.",
+      "Adapta produto, preço, comunicação e distribuição às condições locais.",
+      "Nunca muda de preço.",
+      "Evita qualquer estudo de mercado."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 15,
+    type: "mcq",
+    text: "15. Em termos de produto, 'extensão direta' significa:",
+    options: [
+      "Mesmo produto em todos os mercados sem alterações.",
+      "Produto totalmente novo para cada mercado.",
+      "Apenas mudança de embalagem.",
+      "Proibir vendas em certos países."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 16,
+    type: "mcq",
+    text: "16. 'Adaptação do produto' implica:",
+    options: [
+      "Não alterar nada.",
+      "Ajustar o produto a condições ou preferências locais.",
+      "Apenas traduzir o rótulo.",
+      "Vender apenas online."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 17,
+    type: "mcq",
+    text: "17. 'Invenção de produto' em contexto global é:",
+    options: [
+      "Criar um produto novo para um país ou região específica.",
+      "Copiar produtos locais.",
+      "Reduzir a qualidade de produtos existentes.",
+      "Apenas mudar o nome da marca."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 18,
+    type: "mcq",
+    text: "18. Em políticas de preço global, um desafio é:",
+    options: [
+      "Custos, rendimentos e concorrência variarem entre países.",
+      "Todos os países terem o mesmo poder de compra.",
+      "Proibição total de descontos.",
+      "Inexistência de impostos."
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 19,
+    type: "mcq",
+    text: "19. Em termos de organização, uma 'divisão internacional' dentro da empresa significa:",
+    options: [
+      "Não ter qualquer responsável por mercados externos.",
+      "Criar uma unidade específica para gerir operações internacionais.",
+      "Dar a função internacional apenas ao financeiro.",
+      "Eliminar todas as exportações."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 20,
+    type: "mcq",
+    text: "20. Numa organização verdadeiramente global:",
+    options: [
+      "Marketing internacional é visto como marginal.",
+      "O mundo inteiro é considerado mercado potencial e o marketing é integrado globalmente.",
+      "Só se considera o país de origem.",
+      "Mercados externos são sempre geridos localmente sem coordenação."
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 21,
+    type: "open",
+    text: "21. Explica, em poucas linhas, as principais diferenças entre exportação, joint‑venture e investimento direto como modos de entrada em mercados internacionais.",
+    solution: "Exportação: produzir no país de origem e vender para o exterior (indireta ou direta), com menos risco e controlo. Joint‑venture: parceria com empresa local (licenciamento, fabrico por contrato, propriedade conjunta), com risco e controlo partilhados. Investimento direto: criar ou adquirir instalações no país-alvo, com maior investimento, risco e controlo sobre produção e marketing."
+  },
+  {
+    id: 22,
+    type: "open",
+    text: "22. Dá um exemplo em que faria sentido usar marketing‑mix padronizado e outro com marketing‑mix adaptado.",
+    solution: "Padronizado: produto tecnológico global com uso semelhante em muitos países (ex.: gadget com mesma funcionalidade e posicionamento). Adaptado: produto alimentar ou de higiene com fortes diferenças culturais, ajustando sabor, embalagem e comunicação a cada mercado."
+  }
+]
+
+
+
+
+
+    };
+
+    const quizContainer = document.getElementById("quiz-container");
+
+    function renderQuiz() {
+      let html = `
+        <form id="quiz-form">
+          <p class="quiz-description">${quizData.description}</p>
+      `;
+
+      quizData.questions.forEach(q => {
+        html += `<div class="question" data-qid="${q.id}">
+          <h3>${q.text}</h3>
+        `;
+
+        if (q.type === "mcq") {
+          html += `<ul class="options">`;
+          q.options.forEach((opt, index) => {
+            const inputId = `q${q.id}_opt${index}`;
+html += `
+              <li>
+                <label for="${inputId}">
+                  <input type="radio" name="q${q.id}" id="${inputId}" value="${index}" />
+                  ${opt}
+                </label>
+              </li>`;
+          });
+          html += `</ul>`;
+        } else {
+          html += `<textarea name="q${q.id}" placeholder="Escreve a tua resposta aqui..."></textarea>`;
+        }
+
+        html += `<div class="feedback"></div></div>`;
+      });
+
+      html += `
+        <button type="submit" class="submit-btn">Submeter respostas</button>
+        <div id="quiz-result" class="result" style="display:none;"></div>
+      </form>`;
+
+      quizContainer.innerHTML = html;
+
+      document.getElementById("quiz-form").addEventListener("submit", e => {
+        e.preventDefault();
+        corrigirQuiz();
+      });
+    }
+
+    function corrigirQuiz() {
+      let totalMcq = 0;
+      let correctMcq = 0;
+
+      quizData.questions.forEach(q => {
+        const qDiv = document.querySelector(`.question[data-qid="${q.id}"]`);
+        const feedbackDiv = qDiv.querySelector(".feedback");
+        feedbackDiv.innerHTML = "";
+
+        if (q.type === "mcq") {
+          totalMcq++;
+          const selected = qDiv.querySelector("input[type='radio']:checked");
+          if (!selected) {
+            feedbackDiv.innerHTML = '<div class="result error">Sem resposta.</div>';
+            const correctText = q.options[q.correctIndex];
+            feedbackDiv.innerHTML += '<div class="correct-answer">Solução certa: <span>' + correctText + "</span></div>";
+          } else {
+            const value = parseInt(selected.value, 10);
+            if (value === q.correctIndex) {
+              correctMcq++;
+              feedbackDiv.innerHTML = '<div class="result success">Correto!</div>';
+            } else {
+              feedbackDiv.innerHTML = '<div class="result error">Errado.</div>';
+              const correctText = q.options[q.correctIndex];
+              feedbackDiv.innerHTML += '<div class="correct-answer">Solução certa: <span>' + correctText + "</span></div>";
+            }
+          }
+        } else {
+          const textarea = qDiv.querySelector("textarea");
+          const userAnswer = (textarea.value || "").trim();
+          if (!userAnswer) {
+            feedbackDiv.innerHTML = '<div class="result error">Sem resposta. Vê a sugestão abaixo.</div>';
+          } else {
+            feedbackDiv.innerHTML = '<div class="result success">Resposta registada. Compara com a sugestão abaixo.</div>';
+          }
+          if (q.solution) {
+            feedbackDiv.innerHTML += '<div class="correct-answer">Sugestão de resposta: <span>' + q.solution + "</span></div>";
+          }
+        }
+      });
+
+      const resultDiv = document.getElementById("quiz-result");
+      resultDiv.style.display = "block";
+      resultDiv.className = "result " + (correctMcq === totalMcq ? "success" : "error");
+      resultDiv.textContent = "Acertaste " + correctMcq + " em " + totalMcq + " perguntas de escolha múltipla.";
+    }
+
+    renderQuiz();
+  </script>
+</body>
+</html>
